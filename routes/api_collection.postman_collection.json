@@ -1,0 +1,207 @@
+{
+    "info": {
+      "name": "Project Management API",
+      "description": "Postman collection for testing Project, Customer, and Project Type APIs",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Projects",
+        "item": [
+          {
+            "name": "Get All Projects",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:5000/api/projects",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "projects"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Project",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"projectReferenceNumber\": \"PRJ123\", \"projectName\": \"Sample Project\", \"projectType\": \"60b8d6e4f1c2c23e2f8c1c8e\", \"status\": \"In Progress\", \"customer\": \"60b8d6e4f1c2c23e2f8c1c8f\"}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/projects",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "projects"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Project",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"projectName\": \"Updated Project Name\", \"status\": \"Completed\"}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/projects/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "projects", "1"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Project",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:5000/api/projects/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "projects", "1"]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Customers",
+        "item": [
+          {
+            "name": "Get All Customers",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/customers",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "customers"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Customer",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"customerName\": \"John Doe\"}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/customers",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "customers"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Customer",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:5000/api/customers/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "customers", "1"]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Project Types",
+        "item": [
+          {
+            "name": "Get All Project Types",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/project-types",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "project-types"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Create Project Type",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"projectTypeName\": \"Software Development\"}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/project-types",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "project-types"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Project Type",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:5000/api/project-types/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "project-types", "1"]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
+  
